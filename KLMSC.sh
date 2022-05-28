@@ -1,6 +1,6 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=1										# Version du scripte
+VERSION=2										# Version du scripte
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -4827,7 +4827,7 @@ done # La fin de boucle des proprieter
 }
 
 
-ServerStarter()
+ServerStarter()									# Démarage de server
 {
 while ((i<1));
 do
@@ -4855,7 +4855,7 @@ do
 done
 }
 
-ServerDel()
+ServerDel()										# Supression de serveurs
 {
 while ((i<1));
 do
@@ -4915,7 +4915,7 @@ do
 done
 }
 
-MAJ()
+MAJ()											# Mise a joure automatique du scripte
 {
 echo -e "	\n\n\033[33m\033[04mMise a joure en cours\033[00m\033[32m ..."
 cd /home/$USER/
@@ -4947,7 +4947,7 @@ sudo chmod +rwx MAJ.sh
 #----------------------------------------------------------
 #				Titre de démarage du script
 clear
-echo -e "\033[35m			Version du script :\033[36m$VERSION\033[00m"
+echo -e "\033[35m			Version du script :\033[36m$VERSION\033[00m"						# Info de la version du script
 echo -e "\n\n\n"
 echo -e "\033[32m	██╗  ██╗\033[33m██╗     \033[34m███╗   ███╗\033[35m███████╗ \033[36m██████╗"
 echo -e "\033[32m	██║ ██╔╝\033[33m██║     \033[34m████╗ ████║\033[35m██╔════╝\033[36m██╔════╝"
