@@ -12,6 +12,7 @@ Vert=$(echo -e "\033[32m")						# Colors
 title="Kuroakashiro's Linux Minecraft server creator"
 												# Titre de du terminale
 echo -e "\033]2;$title\007" 					# Permet de déffinire le titre de la page
+[ -f "/home/$USER/MAJ.sh"] && sudo rm -f /home/$USER/MAJ.sh
 #-------------------------------------------------------
 
 RoseDeFeu()										# Easter egg
@@ -4922,7 +4923,7 @@ echo "#!/bin/bash" >> MAJ.sh
 echo "sudo rm -rf /home/$USER/KLMSC" >> MAJ.sh
 echo "git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$USER/KLMSC/KLMSC.sh && cd /home/$USER/KLMSC/" >> MAJ.sh
 echo "Errorlevel=$?" >> MAJ.sh
-echo "if [ "$Errorlevel" -eq "0" ];" >> MAJ.sh
+echo "if [ "\$Errorlevel" -eq "0" ];" >> MAJ.sh
 echo "then" >> MAJ.sh
 echo "	echo -e "\033[32m[OK]	Commande réusit\033[00m"" >> MAJ.sh
 echo "	sudo chmod +rwx /home/$USER/KLMSC/" >> MAJ.sh
@@ -4934,6 +4935,7 @@ echo "then" >> MAJ.sh
 echo "	echo -e "\033[31mErreure\033[00m"" >> MAJ.sh
 echo "	sleep 5" >> MAJ.sh
 echo "fi" >> MAJ.sh
+echo "sudo rm -f MAJ.sh" >> MAJ.sh
 
 sudo chmod +rwx MAJ.sh
 ./MAJ.sh
