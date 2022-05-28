@@ -4902,7 +4902,11 @@ do
 			sleep 4
 			break
 		fi
-		
+	
+	elif [ "$DelMonServer" = "exit" ];
+	then
+		echo -e "\033[31m\n\nEXIT\033[00m"
+	
 	break
 	fi
 	
