@@ -4881,7 +4881,7 @@ do
 		if [ "$ok" = "y" ];
 		then
 			echo -e "	\033[33m\033[04m\nSupression en coure \033[00m\033[31m...\033[00m\n"
-			rm -rf /home/$USER/$DelMonServer/
+			sudo rm -rf /home/$USER/$DelMonServer/
 			Errorlevel=$?
 			if [ "$Errorlevel" -eq "0" ];
 			then
