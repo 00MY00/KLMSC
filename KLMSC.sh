@@ -1,6 +1,6 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=2										# Version du scripte
+VERSION=3										# Version du scripte
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
