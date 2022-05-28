@@ -4917,21 +4917,26 @@ MAJ()
 {
 echo -e "	\n\n\033[33m\033[04mMise a joure en cours\033[00m\033[32m ..."
 cd /home/$USER/
-git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$USER/KLMSC/KLMSC.sh && cd /home/$USER/KLMSC/
-Errorlevel=$?
-if [ "$Errorlevel" -eq "0" ];
-then
-	echo -e "\033[32m[OK]	Commande réusit\033[00m"
-	sudo chmod +rwx /home/$USER/KLMSC/
-	./KLMSC.sh
-	sleep 2
-	break
-elif [ "$Errorlevel" != "0" ];
-then
-	echo -e "\033[31mErreure\033[00m"
-	sleep 5
-fi
+sudo rm -f MAJ.sh
+echo "#!/bin/bash" >> MAJ.sh
+echo "sudo rm -rf /home/$USER/KLMSC" >> MAJ.sh
+echo "git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$USER/KLMSC/KLMSC.sh && cd /home/$USER/KLMSC/" >> MAJ.sh
+echo "Errorlevel=$?" >> MAJ.sh
+echo "if [ "$Errorlevel" -eq "0" ];" >> MAJ.sh
+echo "then" >> MAJ.sh
+echo "	echo -e "\033[32m[OK]	Commande réusit\033[00m"" >> MAJ.sh
+echo "	sudo chmod +rwx /home/$USER/KLMSC/" >> MAJ.sh
+echo "	./KLMSC.sh" >> MAJ.sh
+echo "	sleep 2" >> MAJ.sh
+echo "	break" >> MAJ.sh
+echo "elif [ "$Errorlevel" != "0" ];" >> MAJ.sh
+echo "then" >> MAJ.sh
+echo "	echo -e "\033[31mErreure\033[00m"" >> MAJ.sh
+echo "	sleep 5" >> MAJ.sh
+echo "fi" >> MAJ.sh
 
+sudo chmod +rwx MAJ.sh
+./MAJ.sh
 
 }
 
