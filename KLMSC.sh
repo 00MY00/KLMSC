@@ -1316,48 +1316,48 @@ then
 	echo -e "\033[33m[\033[32m 1  \033[33m]		\033[32m\033[04mChanger le Rcon Port \033[00m"
 	echo -e "\033[33m[\033[32m 2  \033[33m]		\033[32m\033[04mChanger la seed de map\033[00m"
 	echo -e "\033[33m[\033[32m 3  \033[33m]		\033[32m\033[04mChanger le mode de jeux\033[00m"
-	echo -e "\033[33m[\033[32m 4  \033[33m]		\033[32m\033[04mActiver les command block\033[00m"
+	echo -e "\033[33m[\033[32m 4  \033[33m]		\033[32m\033[04mActiver les commands blocsk\033[00m"
 	echo -e "\033[33m[\033[32m 5  \033[33m]		\033[32m\033[04mActiver query\033[00m"
 	echo -e "\033[33m[\033[32m 6  \033[33m]		\033[32m\033[04mGenerator settings\033[00m"
-	echo -e "\033[33m[\033[32m 7  \033[33m]		\033[32m\033[04mChanger nom du mond\033[00m"
-	echo -e "\033[33m[\033[32m 8  \033[33m]		\033[32m\033[04mChanger le du serveur afficher\033[00m"
+	echo -e "\033[33m[\033[32m 7  \033[33m]		\033[32m\033[04mChanger nom du monde\033[00m"
+	echo -e "\033[33m[\033[32m 8  \033[33m]		\033[32m\033[04mChanger le nom du serveur\033[00m"
 	echo -e "\033[33m[\033[32m 9  \033[33m]		\033[32m\033[04mChanger le Query Port\033[00m"
 	echo -e "\033[33m[\033[32m 10 \033[33m]		\033[32m\033[04mPVP actif ou non\033[00m"
-	echo -e "\033[33m[\033[32m 11 \033[33m]		\033[32m\033[04mGéneration de structure\033[00m"
+	echo -e "\033[33m[\033[32m 11 \033[33m]		\033[32m\033[04mGénération de structures\033[00m"
 	echo -e "\033[33m[\033[32m 12 \033[33m]		\033[32m\033[04mChanger difficulter\033[00m"
-	echo -e "\033[33m[\033[32m 13 \033[33m]		\033[32m\033[04mResource pack actif ou non\033[00m"
+	echo -e "\033[33m[\033[32m 13 \033[33m]		\033[32m\033[04mRessource pack actif ou non\033[00m"
 	echo -e "\033[33m[\033[32m 14 \033[33m]		\033[32m\033[04mChanger nombre de tick\033[00m"
 	echo -e "\033[33m[\033[32m 15 \033[33m]		\033[32m\033[04mChanger le nombre de joueurs\033[00m"
 	echo -e "\033[33m[\033[32m 16 \033[33m]		\033[32m\033[04mChanger le online mode\033[00m"
 	echo -e "\033[33m[\033[32m 17 \033[33m]		\033[32m\033[04mChanger enable status\033[00m"
 	echo -e "\033[33m[\033[32m 18 \033[33m]		\033[32m\033[04mAutoriser le flight\033[00m"
 	echo -e "\033[33m[\033[32m 19 \033[33m]		\033[32m\033[04mChanger broadcast rcon to ops\033[00m"
-	echo -e "\033[33m[\033[32m 20 \033[33m]		\033[32m\033[04mChanger la max distance de vue\033[00m"
-	echo -e "\033[33m[\033[32m 21 \033[33m]		\033[32m\033[04mAjouter une IP au server\033[00m"
-	echo -e "\033[33m[\033[32m 22 \033[33m]		\033[32m\033[04mAjouter l'adress du resource pack prompt\033[00m"
+	echo -e "\033[33m[\033[32m 20 \033[33m]		\033[32m\033[04mChanger la distance max de vue\033[00m"
+	echo -e "\033[33m[\033[32m 21 \033[33m]		\033[32m\033[04mAjouter une IP au serveur\033[00m"
+	echo -e "\033[33m[\033[32m 22 \033[33m]		\033[32m\033[04mAjouter l'adresse du ressource pack prompt\033[00m"
 	echo -e "\033[33m[\033[32m 23 \033[33m]		\033[32m\033[04mActiver ou désactiver nether\033[00m"
-	echo -e "\033[33m[\033[32m 24 \033[33m]		\033[32m\033[04mChanger le Port server\033[00m"
-	echo -e "\033[33m[\033[32m 25 \033[33m]		\033[32m\033[04mActiver ou désactiver enable-rcon\033[00m"
+	echo -e "\033[33m[\033[32m 24 \033[33m]		\033[32m\033[04mChanger le Port serveur\033[00m"
+	echo -e "\033[33m[\033[32m 25 \033[33m]		\033[32m\033[04mActiver ou désactiver enable rcon\033[00m"
 	echo -e "\033[33m[\033[32m 26 \033[33m]		\033[32m\033[04mActiver ou désactiver sync chunk writes\033[00m"
 	echo -e "\033[33m[\033[32m 27 \033[33m]		\033[32m\033[04mChanger niveau OP\033[00m"
 	echo -e "\033[33m[\033[32m 28 \033[33m]		\033[32m\033[04mActiver ou désactiver prevent proxy connections\033[00m"
 	echo -e "\033[33m[\033[32m 29 \033[33m]		\033[32m\033[04mActiver ou désactiver hide online players\033[00m"
-	echo -e "\033[33m[\033[32m 30 \033[33m]		\033[32m\033[04mChanger le resource pack\033[00m"
+	echo -e "\033[33m[\033[32m 30 \033[33m]		\033[32m\033[04mChanger le ressource pack\033[00m"
 	echo -e "\033[33m[\033[32m 31 \033[33m]		\033[32m\033[04mChanger Entity broadcast range percentage\033[00m"
-	echo -e "\033[33m[\033[32m 32 \033[33m]		\033[32m\033[04mChanger Nombre de chunck chargés autour du joueur\033[00m"
-	echo -e "\033[33m[\033[32m 33 \033[33m]		\033[32m\033[04mChanger le MDP du rcon conexion a distance\033[00m"
+	echo -e "\033[33m[\033[32m 32 \033[33m]		\033[32m\033[04mChanger Nombre de chunk chargés autour du joueur\033[00m"
+	echo -e "\033[33m[\033[32m 33 \033[33m]		\033[32m\033[04mChanger le MDP du rcon pour connexion à distance\033[00m"
 	echo -e "\033[33m[\033[32m 34 \033[33m]		\033[32m\033[04mActiver ou désactiver force gamemode\033[00m"
 	echo -e "\033[33m[\033[32m 35 \033[33m]		\033[32m\033[04mActiver ou désactiver hardcore\033[00m"
 	echo -e "\033[33m[\033[32m 36 \033[33m]		\033[32m\033[04mActiver ou désactiver Liste blanche\033[00m"
 	echo -e "\033[33m[\033[32m 37 \033[33m]		\033[32m\033[04mActiver ou désactiver Spawn npcs\033[00m"
 	echo -e "\033[33m[\033[32m 38 \033[33m]		\033[32m\033[04mActiver ou désactiver Spawn animals\033[00m"
-	echo -e "\033[33m[\033[32m 39 \033[33m]		\033[32m\033[04mChanger le type de monde level type\033[00m"
-	echo -e "\033[33m[\033[32m 40 \033[33m]		\033[32m\033[04mPermet de ajouter a filtering config\033[00m"
+	echo -e "\033[33m[\033[32m 39 \033[33m]		\033[32m\033[04mChanger le monde level type\033[00m"
+	echo -e "\033[33m[\033[32m 40 \033[33m]		\033[32m\033[04mPermet d'ajouter a filtering config\033[00m"
 	echo -e "\033[33m[\033[32m 41 \033[33m]		\033[32m\033[04mActiver ou désactiver le Spawn des monstres\033[00m"
 	echo -e "\033[33m[\033[32m 42 \033[33m]		\033[32m\033[04mActiver ou désactiver Enforce whitelist\033[00m"
-	echo -e "\033[33m[\033[32m 43 \033[33m]		\033[32m\033[04mChange la protection du Spawn\033[00m"
-	echo -e "\033[33m[\033[32m 44 \033[33m]		\033[32m\033[04mChange la taille Max du monde\033[00m"
-	echo -e "\033[33m[\033[32m reset \033[33m]	\033[32m\033[04mRinisialise les properties\033[00m"
+	echo -e "\033[33m[\033[32m 43 \033[33m]		\033[32m\033[04mChanger la protection du Spawn\033[00m"
+	echo -e "\033[33m[\033[32m 44 \033[33m]		\033[32m\033[04mChanger la taille Max du monde\033[00m"
+	echo -e "\033[33m[\033[32m reset \033[33m]	\033[32m\033[04mRéinitialiser les properties\033[00m"
 	echo -e "\033[35m---------------------------------------------------------\033[00m"
 	echo -e "\n\n"
 
@@ -1372,9 +1372,9 @@ then
 			x=$(sed -n 4p server.properties)
 			VariableTest=0
 			echo -e "\n\n"
-			echo -e "\033[33mChoisicer le port que vous voulez\n"
-			echo -e "Contien actuelement: \033[32m'$x' \033[00m\n"
-			echo -e "\033[35mPort recomandez : \033[36m'25575'\033[00m"
+			echo -e "\033[33mChoisissez le port que vous voulez\n"
+			echo -e "Contien actuellement: \033[32m'$x' \033[00m\n"
+			echo -e "\033[35mPort recommandez : \033[36m'25575'\033[00m"
 			
 			read -p ": " Proprieter		# Nouvelle properties
 
@@ -1388,7 +1388,7 @@ then
 			
 				if [ "$Proprieter" -eq "1" ]; #	Port utiliser ci pas utiliser change par le port voulu
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mTCP Port Multiplexer (service de multiplexage)\033[00m"
 					echo -e "\033[35mtcpmux\033[00m"
 					sleep 5
@@ -1396,7 +1396,7 @@ then
 				
 				elif [ "$Proprieter" -eq "5" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mRemote Job Entry (saisie de tâche à distance)\033[00m"
 					echo -e "\033[35mrje\033[00m"
 					sleep 5
@@ -1404,7 +1404,7 @@ then
 				
 				elif [ "$Proprieter" -eq "7" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mService d’écho\033[00m"
 					echo -e "\033[35mecho\033[00m"
 					sleep 5
@@ -1412,7 +1412,7 @@ then
 				
 				elif [ "$Proprieter" -eq "9" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mService zéro à des fins de test \033[00m"
 					echo -e "\033[35mdiscard\033[00m"
 					sleep 5
@@ -1420,7 +1420,7 @@ then
 				
 				elif [ "$Proprieter" -eq "11" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mInformations système \033[00m"
 					echo -e "\033[35msystat\033[00m"
 					sleep 5
@@ -1428,7 +1428,7 @@ then
 				
 				elif [ "$Proprieter" -eq "13" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mSaisie de la date et de l’heure \033[00m"
 					echo -e "\033[35mdaytime\033[00m"
 					sleep 5
@@ -1436,7 +1436,7 @@ then
 
 				elif [ "$Proprieter" -eq "17" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mEnvoie la citation du jour \033[00m"
 					echo -e "\033[35mqotd\033[00m"
 					sleep 5
@@ -1444,7 +1444,7 @@ then
 			
 				elif [ "$Proprieter" -eq "18" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mTransfère des SMS \033[00m"
 					echo -e "\033[35mmsp\033[00m"
 					sleep 5
@@ -1452,7 +1452,7 @@ then
 					
 				elif [ "$Proprieter" -eq "19" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mEnvoie une séquence de caractères infinie \033[00m"
 					echo -e "\033[35mchargen\033[00m"
 					sleep 5
@@ -1460,7 +1460,7 @@ then
 					
 				elif [ "$Proprieter" -eq "20" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mTransmission de données FTP \033[00m"
 					echo -e "\033[35mftp-data\033[00m"
 					sleep 5
@@ -1468,7 +1468,7 @@ then
 					
 				elif [ "$Proprieter" -eq "21" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mConnexion FTP \033[00m"
 					echo -e "\033[35mftp\033[00m"
 					sleep 5
@@ -1476,7 +1476,7 @@ then
 					
 				elif [ "$Proprieter" -eq "22" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mService Secure Shell \033[00m"
 					echo -e "\033[35mssh\033[00m"
 					sleep 5
@@ -1484,7 +1484,7 @@ then
 				
 				elif [ "$Proprieter" -eq "23" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mService Telnet \033[00m"
 					echo -e "\033[35mtelnet\033[00m"
 					sleep 5
@@ -1492,7 +1492,7 @@ then
 				
 				elif [ "$Proprieter" -eq "25" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mSimple Mail Transfer Protocol (protocole simple de transfert de courrier) \033[00m"
 					echo -e "\033[35msmtp\033[00m"
 					sleep 5
@@ -1500,7 +1500,7 @@ then
 				
 				elif [ "$Proprieter" -eq "37" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mProtocole temporel lisible par un ordinateur \033[00m"
 					echo -e "\033[35mtime\033[00m"
 					sleep 5
@@ -1508,7 +1508,7 @@ then
 				
 				elif [ "$Proprieter" -eq "39" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mResource Location Protocol (protocole de localisation des ressources) \033[00m"
 					echo -e "\033[35mrip\033[00m"
 					sleep 5
@@ -1516,7 +1516,7 @@ then
 				
 				elif [ "$Proprieter" -eq "42" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mService de noms \033[00m"
 					echo -e "\033[35mnameserver\033[00m"
 					sleep 5
@@ -1524,7 +1524,7 @@ then
 				
 				elif [ "$Proprieter" -eq "43" ];
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					echo -e "\033[33mService d’annuaire WHOIS \033[00m"
 					echo -e "\033[35mnicname\033[00m"
 					sleep 5
@@ -1532,13 +1532,13 @@ then
 				
 				elif [ "$Proprieter" -le "995" ]; # utiliser jusque a 995 https://www.ionos.fr/digitalguide/serveur/know-how/ports-tcpet-udp/
 				then
-					echo -e "\033[31mImposible ce port est déja utilisé\033[00m"
+					echo -e "\033[31mImpossible ce port est déjà utilisé\033[00m"
 					sleep 5
 					continue
 				
 				elif [ "$Proprieter" -ge "65001" ];
 				then
-				echo -e "\033[31mImposible ce port existe pas Max: 65'000\033[00m"
+				echo -e "\033[31mImpossible ce port exist pas Max: 65'000\033[00m"
 				continue
 				
 				elif [ "$Proprieter" = "exit" ];
@@ -1548,7 +1548,7 @@ then
 				else 
 					clear
 					echo -e "\n\n"
-					echo -e "\033[32m[OK] le port va etre changer par $Proprieter\033[00m"
+					echo -e "\033[32m[OK] le port va être changé par $Proprieter\033[00m"
 					sudo sed -i "s/$x/rcon.port=$Proprieter/" "server.properties"
 					echo -e "\n\n"
 					sleep 3
@@ -1573,8 +1573,8 @@ then
 				
 			VariableTest=0
 			echo -e "\n\n"
-			echo -e "\033[33mChoisicer la seed que vous voulez\n"
-			echo -e "Contien actuelement: \033[32m'$y' \033[00m\n"
+			echo -e "\033[33mChoisissez la seed que vous voulez\n"
+			echo -e "Contient actuellement: \033[32m'$y' \033[00m\n"
 			echo -e "[\033[31mexit\033[00m] pour quiter\n"
 			
 			
@@ -1583,7 +1583,7 @@ then
 			if [ "${#Proprieter}" -ge "32" ];
 			then
 				echo -e "\n"
-				echo -e "\033[31mC'est impossible sa dépace le maximume\033[00m"
+				echo -e "\033[31mC'est impossible sa dépasse le maximum\033[00m"	# Corection Fin ici
 				sleep 5
 				
 			elif [ "$Proprieter" = "exit" ];
@@ -4836,7 +4836,7 @@ do
 	echo -e "\033[32m\n"
 	ls /home/$USER | grep Minecraft-1
 	echo -e "\033[00m\n"
-	echo -e "\n	\033[36mChoisicer quelle serveur démarer\033[00m\n\n"
+	echo -e "\n	\033[36mChoisissez quel serveur démarrer\033[00m\n\n"
 	
 	read -p ": " StartMonServer
 	
@@ -4844,7 +4844,7 @@ do
 	then
 		cd /home/$USER/$StartMonServer/
 		
-		echo -e "\033[33m\033[04m\nDémarage en coure \033[00m\033[36m...\033[32m\n"
+		echo -e "\033[33m\033[04m\nDémarrage en cours \033[00m\033[36m...\033[32m\n"
 		sh -x Start_MC_Serveur.sh
 		
 		echo -e "\033[00m\n"
@@ -4864,30 +4864,30 @@ do
 	echo -e "\033[32m\n"
 	ls /home/$USER | grep Minecraft-1
 	echo -e "\033[00m\n"
-	echo -e "\n	\033[36mChoisicer quelle serveur Suprimer\033[00m\n\n"
+	echo -e "\n	\033[36mChoisissez quel serveur Supprimer !\033[00m\n\n"
 	
 	read -p ": " DelMonServer
 	
 	if [ -d "$DelMonServer" ];
 	then
 		clear
-		echo -e "\n\n\033[33m\033[04mLe Server Minecraft \033[32m'$DelMonServer'\033[00m \033[33mva etre suprimé\033[00m\n"
+		echo -e "\n\n\033[33m\033[04mLe Serveur Minecraft \033[32m'$DelMonServer'\033[00m \033[33mva être supprimé\033[00m\n"
 		
 		echo -e "\033[35m--------------------\033[00m"
 		echo -e "[\033[32my\033[00m] \033[33mpour continuer\033[00m"
-		echo -e "[\033[31mn\033[00m] \033[33mpour anuler\033[00m"
+		echo -e "[\033[31mn\033[00m] \033[33mpour annuler\033[00m"
 		echo -e "\033[35m--------------------\033[00m\n"
 		
 		read -p ": " ok
 		
 		if [ "$ok" = "y" ];
 		then
-			echo -e "	\033[33m\033[04m\nSupression en coure \033[00m\033[31m...\033[00m\n"
+			echo -e "	\033[33m\033[04m\nSuppression en cours \033[00m\033[31m...\033[00m\n"
 			sudo rm -rf /home/$USER/$DelMonServer/
 			Errorlevel=$?
 			if [ "$Errorlevel" -eq "0" ];
 			then
-				echo -e "\033[32m[OK]	Commande réusit\033[00m"
+				echo -e "\033[32m[OK]	Commande réusite\033[00m"
 				sleep 2
 				break
 			elif [ "$Errorlevel" != "0" ];
@@ -4900,7 +4900,7 @@ do
 		then
 			clear
 			echo -e "\n\n"
-			echo -e "	\033[33m\033[04m\nSupression\033[00m\033[31m ANULER\033[00m\n"
+			echo -e "	\033[33m\033[04m\nSuppression\033[00m\033[31m ANNULER\033[00m\n"
 			sleep 4
 			break
 		fi
@@ -4917,7 +4917,7 @@ done
 
 MAJ()											# Mise a joure automatique du scripte
 {
-echo -e "	\n\n\033[33m\033[04mMise a joure en cours\033[00m\033[32m ..."
+echo -e "	\n\n\033[33m\033[04mMise à jour en cours\033[00m\033[32m ..."
 cd /home/$USER/
 sudo rm -f MAJ.sh
 echo "#!/bin/bash" >> MAJ.sh
@@ -4926,7 +4926,7 @@ echo "git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$US
 echo "Errorlevel=\$?" >> MAJ.sh
 echo "if [ "\$Errorlevel" -eq "0" ];" >> MAJ.sh
 echo "then" >> MAJ.sh
-echo "	echo -e "\033[32m[OK]	Commande réusit\033[00m"" >> MAJ.sh
+echo "	echo -e "\033[32m[OK]	Commande réusite\033[00m"" >> MAJ.sh
 echo "	sudo chmod +rwx /home/$USER/KLMSC/" >> MAJ.sh
 echo "	./KLMSC.sh" >> MAJ.sh
 echo "	sleep 2" >> MAJ.sh
@@ -4956,7 +4956,7 @@ echo -e "\033[32m	██╔═██╗ \033[33m██║     \033[34m██║�
 echo -e "\033[32m	██║  ██╗\033[33m███████╗\033[34m██║ ╚═╝ ██║\033[35m███████║\033[36m╚██████╗"
 echo -e "\033[32m	╚═╝  ╚═╝\033[33m╚══════╝\033[34m╚═╝     ╚═╝\033[35m╚══════╝ \033[36m╚═════╝\033[00m"
 echo -e "\n		\033[32m\033[04mCrée par Kuroakashiro"
-echo -e "		\033[32m\033[04mTous drois réservé à Kuroakashiro\n"
+echo -e "		\033[32m\033[04mTous droit réservé à Kuroakashiro\n"
 echo -e "\033[30m"
 sleep 5
 echo -e "\033[00m"
@@ -4966,13 +4966,13 @@ echo -e "\033[00m"
 while ((i<1));									# Main
 do
 	clear
-	echo -e "\n\n\033[33m	Bien venu dans le scripte de creation de serveur\n	Minecraft crée par \033[32mKuroakashiro \033[33m!\033[00m"
+	echo -e "\n\n\033[33m	Bienvenue dans le script de creation de serveur\n	Minecraft crée par \033[32mKuroakashiro \033[33m!\033[00m"
 	echo -e "\n\n	[\033[32myes  \033[00m] \033[00mPour continuer"
-	echo -e "	[\033[31mnon  \033[00m] \033[00mpour stopée ou '\033[31mexit\033[00m'"
-	echo -e "	[\033[32mprop \033[00m] Pour Changer les properties"
+	echo -e "	[\033[31mnon  \033[00m] \033[00mpour stoper ou '\033[31mexit\033[00m'"
+	echo -e "	[\033[32mprop \033[00m] Pour Changer les propriétés"
 	echo -e "	[\033[32mdel  \033[00m] Pour Suprimer un serveur"
-	echo -e "	[\033[32mmaj  \033[00m] Pour Mettre ajour le script"
-	echo -e "	[\033[32mstart\033[00m] Pour Afficher est démarer les servers"
+	echo -e "	[\033[32mmaj  \033[00m] Pour Mettre à jour le script"
+	echo -e "	[\033[32mstart\033[00m] Pour Afficher est démarrer les serveurs"
 	echo -e "\n"
 
 
