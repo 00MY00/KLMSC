@@ -4922,6 +4922,7 @@ Errorlevel=$?
 if [ "$Errorlevel" -eq "0" ];
 then
 	echo -e "\033[32m[OK]	Commande réusit\033[00m"
+	sudo chmod +rwx /home/$USER/KLMSC/
 	./KLMSC.sh
 	sleep 2
 	break
