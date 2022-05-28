@@ -1,5 +1,6 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
+VERSION=1										# Version du scripte
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -12,7 +13,7 @@ Vert=$(echo -e "\033[32m")						# Colors
 title="Kuroakashiro's Linux Minecraft server creator"
 												# Titre de du terminale
 echo -e "\033]2;$title\007" 					# Permet de déffinire le titre de la page
-[ -f "/home/$USER/MAJ.sh"] && sudo rm -f /home/$USER/MAJ.sh
+[ -f "/home/$USER/MAJ.sh" ] && sudo rm -f /home/$USER/MAJ.sh
 #-------------------------------------------------------
 
 RoseDeFeu()										# Easter egg
@@ -4922,7 +4923,7 @@ sudo rm -f MAJ.sh
 echo "#!/bin/bash" >> MAJ.sh
 echo "sudo rm -rf /home/$USER/KLMSC" >> MAJ.sh
 echo "git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$USER/KLMSC/KLMSC.sh && cd /home/$USER/KLMSC/" >> MAJ.sh
-echo "Errorlevel=$?" >> MAJ.sh
+echo "Errorlevel=\$?" >> MAJ.sh
 echo "if [ "\$Errorlevel" -eq "0" ];" >> MAJ.sh
 echo "then" >> MAJ.sh
 echo "	echo -e "\033[32m[OK]	Commande réusit\033[00m"" >> MAJ.sh
@@ -4930,12 +4931,11 @@ echo "	sudo chmod +rwx /home/$USER/KLMSC/" >> MAJ.sh
 echo "	./KLMSC.sh" >> MAJ.sh
 echo "	sleep 2" >> MAJ.sh
 echo "	break" >> MAJ.sh
-echo "elif [ "$Errorlevel" != "0" ];" >> MAJ.sh
+echo "elif [ "\$Errorlevel" != "0" ];" >> MAJ.sh
 echo "then" >> MAJ.sh
 echo "	echo -e "\033[31mErreure\033[00m"" >> MAJ.sh
 echo "	sleep 5" >> MAJ.sh
 echo "fi" >> MAJ.sh
-echo "sudo rm -f MAJ.sh" >> MAJ.sh
 
 sudo chmod +rwx MAJ.sh
 ./MAJ.sh
@@ -4947,7 +4947,7 @@ sudo chmod +rwx MAJ.sh
 #----------------------------------------------------------
 #				Titre de démarage du script
 clear
-
+echo -e "\033[35m			Version du script :\033[36m$VERSION\033[00m"
 echo -e "\n\n\n"
 echo -e "\033[32m	██╗  ██╗\033[33m██╗     \033[34m███╗   ███╗\033[35m███████╗ \033[36m██████╗"
 echo -e "\033[32m	██║ ██╔╝\033[33m██║     \033[34m████╗ ████║\033[35m██╔════╝\033[36m██╔════╝"
