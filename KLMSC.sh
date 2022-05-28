@@ -4913,6 +4913,27 @@ do
 done
 }
 
+MAJ()
+{
+echo -e "	\n\n\033[33m\033[04mMise a joure en cours\033[00m\033[32m ..."
+cd /home/$USER/
+git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$USER/KLMSC/KLMSC.sh && cd /home/$USER/KLMSC/
+Errorlevel=$?
+if [ "$Errorlevel" -eq "0" ];
+then
+	echo -e "\033[32m[OK]	Commande réusit\033[00m"
+	./KLMSC.sh
+	sleep 2
+	break
+elif [ "$Errorlevel" != "0" ];
+then
+	echo -e "\033[31mErreure\033[00m"
+	sleep 5
+fi
+
+
+}
+
 
 
 #----------------------------------------------------------
@@ -4942,6 +4963,7 @@ do
 	echo -e "	[\033[31mnon  \033[00m] \033[00mpour stopée ou '\033[31mexit\033[00m'"
 	echo -e "	[\033[32mprop \033[00m] Pour Changer les properties"
 	echo -e "	[\033[32mdel  \033[00m] Pour Suprimer un serveur"
+	echo -e "	[\033[32mmaj  \033[00m] Pour Mettre ajour le script"
 	echo -e "	[\033[32mstart\033[00m] Pour Afficher est démarer les servers"
 	echo -e "\n"
 
@@ -4991,6 +5013,10 @@ do
 	elif [ "$user" = "del" ];
 	then
 		ServerDel
+		
+	elif [ "$user" = "maj" ];
+	then
+		MAJ
 		
 	elif [ "$user" = "" ];
 	then
