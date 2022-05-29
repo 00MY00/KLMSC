@@ -4989,7 +4989,7 @@ do
 	echo -e "	[\033[32mmaj  \033[00m] Pour Mettre à jour le script"
 	echo -e "	[\033[32mstart\033[00m] Pour Afficher est démarrer les serveurs"
 	echo -e "\n"
-	echo -e "\033[35m≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\033[00m"
+	echo -e "\033[35m≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\033[00m\n"
 
 	read -p ": " user								# Start demande
 
