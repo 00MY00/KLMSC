@@ -4979,6 +4979,8 @@ echo -e "\033[00m"
 while ((i<1));									# Main
 do
 	clear
+	echo -e "\033[35m			Version du script :\033[36m$VERSION\033[00m"						# Info de la version du script
+	echo -e "\033[35m≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\033[00m"
 	echo -e "\n\n\033[33m	Bienvenue dans le script de creation de serveur\n	Minecraft crée par \033[32mKuroakashiro \033[33m!\033[00m"
 	echo -e "\n\n	[\033[32myes  \033[00m] \033[00mPour continuer"
 	echo -e "	[\033[31mnon  \033[00m] \033[00mpour stoper ou '\033[31mexit\033[00m'"
