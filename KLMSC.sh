@@ -1,6 +1,6 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=3										# Version du scripte
+VERSION=4										# Version du scripte
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -2642,13 +2642,13 @@ then
 			echo -e "Contien actuelement: \033[32m'$y' \033[00m\n"
 			echo -e "[\033[31mexit\033[00m] pour quiter\n"
 			echo -e "\033[35m-------------------\033[00m"
-			echo -e "[\033[32m1\033[00m]	\033[32m\033[04mRinisialiser\033[00m"
+			echo -e "[\033[32m-1\033[00m]	\033[32m\033[04mRinisialiser\033[00m"
 			echo -e "\033[35m-------------------\033[00m"
 			
 			read -p ": " Proprieter		# Nouvelle properties
 			
 			
-			if [ "$Proprieter" = "1" ];
+			if [ "$Proprieter" = "-1" ];
 			then
 				sudo sed -i "s/$x/max-players=20/" "server.properties"
 				Errorlevel=$?
@@ -2667,7 +2667,7 @@ then
 				break
 			
 			
-			elif [ "${Proprieter:4}" != "" ];
+			elif [ "${Proprieter:1}" != "" ];
 			then
 				sudo sed -i "s/$x/max-players=$Proprieter/" "server.properties"
 				Errorlevel=$?
@@ -4942,7 +4942,20 @@ sudo chmod +rwx MAJ.sh
 
 }
 
+INFO()											# En traveau
+{
 
+# aficher le contenu docx
+
+[ -f "t.txt" ] && sudo rm -f "t.txt"
+sudo apt-get update
+sudo apt install docx2txt
+sudo docx2txt "Tutorielle d'utilisation de KLMc Virtual Box.docx" t.txt
+cat t.txt
+
+
+
+}
 
 #----------------------------------------------------------
 #				Titre de démarage du script
