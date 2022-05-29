@@ -1,6 +1,6 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=4										# Version du scripte
+VERSION=5										# Version du scripte
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -3806,7 +3806,7 @@ then
 				break
 			
 			
-			elif [ "${Proprieter:4}" != "" ];
+			elif [ "${Proprieter:1}" != "" ];
 			then
 				sudo sed -i "s/$x/entity-broadcast-range-percentage=$Proprieter/" "server.properties"
 				Errorlevel=$?
@@ -3870,7 +3870,7 @@ then
 				break
 			
 			
-			elif [ "${Proprieter:4}" != "" ];
+			elif [ "${Proprieter:1}" != "" ];
 			then
 				sudo sed -i "s/$x/simulation-distance=$Proprieter/" "server.properties"
 				Errorlevel=$?
@@ -4738,67 +4738,67 @@ then
 		then
 			echo -e "\033[32m[OK]	Commande réusit\033[00m"
 			echo "#Minecraft server properties" >> "server.properties"
-		echo "#Sun May 08 20:51:19 CEST 2022" >> "server.properties"
-		echo "enable-jmx-monitoring=false" >> "server.properties"
-		echo "rcon.port=25575" >> "server.properties"
-		echo "level-seed=944710140" >> "server.properties"
-		echo "gamemode=creatif" >> "server.properties"
-		echo "enable-command-block=false" >> "server.properties"
-		echo "enable-query=false" >> "server.properties"
-		echo "generator-settings={}" >> "server.properties"
-		echo "level-name=world" >> "server.properties"
-		echo "motd=A Minecraft Server" >> "server.properties"
-		echo "query.port=25565" >> "server.properties"
-		echo "pvp=true" >> "server.properties"
-		echo "generate-structures=true" >> "server.properties"
-		echo "difficulty=easy" >> "server.properties"
-		echo "network-compression-threshold=256" >> "server.properties"
-		echo "require-resource-pack=false" >> "server.properties"
-		echo "max-tick-time=60000" >> "server.properties"
-		echo "use-native-transport=true" >> "server.properties"
-		echo "max-players=20" >> "server.properties"
-		echo "online-mode=true" >> "server.properties"
-		echo "enable-status=true" >> "server.properties"
-		echo "allow-flight=false" >> "server.properties"
-		echo "broadcast-rcon-to-ops=true" >> "server.properties"
-		echo "view-distance=10" >> "server.properties"
-		echo "server-ip=" >> "server.properties"
-		echo "resource-pack-prompt=" >> "server.properties"
-		echo "allow-nether=true" >> "server.properties"
-		echo "server-port=25565" >> "server.properties"
-		echo "enable-rcon=false" >> "server.properties"
-		echo "sync-chunk-writes=true" >> "server.properties"
-		echo "op-permission-level=4" >> "server.properties"
-		echo "prevent-proxy-connections=false" >> "server.properties"
-		echo "hide-online-players=false" >> "server.properties"
-		echo "resource-pack=" >> "server.properties"
-		echo "entity-broadcast-range-percentage=100" >> "server.properties"
-		echo "simulation-distance=10" >> "server.properties"
-		echo "rcon.password=" >> "server.properties"
-		echo "player-idle-timeout=0" >> "server.properties"
-		echo "force-gamemode=false" >> "server.properties"
-		echo "rate-limit=0" >> "server.properties"
-		echo "hardcore=false" >> "server.properties"
-		echo "white-list=false" >> "server.properties"
-		echo "broadcast-console-to-ops=true" >> "server.properties"
-		echo "spawn-npcs=true" >> "server.properties"
-		echo "spawn-animals=true" >> "server.properties"
-		echo "function-permission-level=2" >> "server.properties"
-		echo "level-type=default" >> "server.properties"
-		echo "text-filtering-config=" >> "server.properties"
-		echo "spawn-monsters=true" >> "server.properties"
-		echo "enforce-whitelist=false" >> "server.properties"
-		echo "resource-pack-sha1=" >> "server.properties"
-		echo "spawn-protection=16" >> "server.properties"
-		echo "max-world-size=29999984" >> "server.properties"
-	
-		clear
-		echo -e "\033[31m\nTerminé\033[00m"
-		echo -e "\033[35m------------------------------------------\033[00m"
-		cat "server.properties"
-		echo -e "\033[35m------------------------------------------\033[00m\n"
-		sleep 10
+			echo "#Sun May 08 20:51:19 CEST 2022" >> "server.properties"
+			echo "enable-jmx-monitoring=false" >> "server.properties"
+			echo "rcon.port=25575" >> "server.properties"
+			echo "level-seed=944710140" >> "server.properties"
+			echo "gamemode=creatif" >> "server.properties"
+			echo "enable-command-block=false" >> "server.properties"
+			echo "enable-query=false" >> "server.properties"
+			echo "generator-settings={}" >> "server.properties"
+			echo "level-name=world" >> "server.properties"
+			echo "motd=A Minecraft Server" >> "server.properties"
+			echo "query.port=25565" >> "server.properties"
+			echo "pvp=true" >> "server.properties"
+			echo "generate-structures=true" >> "server.properties"
+			echo "difficulty=easy" >> "server.properties"
+			echo "network-compression-threshold=256" >> "server.properties"
+			echo "require-resource-pack=false" >> "server.properties"
+			echo "max-tick-time=60000" >> "server.properties"
+			echo "use-native-transport=true" >> "server.properties"
+			echo "max-players=20" >> "server.properties"
+			echo "online-mode=true" >> "server.properties"
+			echo "enable-status=true" >> "server.properties"
+			echo "allow-flight=false" >> "server.properties"
+			echo "broadcast-rcon-to-ops=true" >> "server.properties"
+			echo "view-distance=10" >> "server.properties"
+			echo "server-ip=" >> "server.properties"
+			echo "resource-pack-prompt=" >> "server.properties"
+			echo "allow-nether=true" >> "server.properties"
+			echo "server-port=25565" >> "server.properties"
+			echo "enable-rcon=false" >> "server.properties"
+			echo "sync-chunk-writes=true" >> "server.properties"
+			echo "op-permission-level=4" >> "server.properties"
+			echo "prevent-proxy-connections=false" >> "server.properties"
+			echo "hide-online-players=false" >> "server.properties"
+			echo "resource-pack=" >> "server.properties"
+			echo "entity-broadcast-range-percentage=100" >> "server.properties"
+			echo "simulation-distance=10" >> "server.properties"
+			echo "rcon.password=" >> "server.properties"
+			echo "player-idle-timeout=0" >> "server.properties"
+			echo "force-gamemode=false" >> "server.properties"
+			echo "rate-limit=0" >> "server.properties"
+			echo "hardcore=false" >> "server.properties"
+			echo "white-list=false" >> "server.properties"
+			echo "broadcast-console-to-ops=true" >> "server.properties"
+			echo "spawn-npcs=true" >> "server.properties"
+			echo "spawn-animals=true" >> "server.properties"
+			echo "function-permission-level=2" >> "server.properties"
+			echo "level-type=default" >> "server.properties"
+			echo "text-filtering-config=" >> "server.properties"
+			echo "spawn-monsters=true" >> "server.properties"
+			echo "enforce-whitelist=false" >> "server.properties"
+			echo "resource-pack-sha1=" >> "server.properties"
+			echo "spawn-protection=16" >> "server.properties"
+			echo "max-world-size=29999984" >> "server.properties"
 		
+			clear
+			echo -e "\033[31m\nTerminé\033[00m"
+			echo -e "\033[35m------------------------------------------\033[00m"
+			cat "server.properties"
+			echo -e "\033[35m------------------------------------------\033[00m\n"
+			sleep 10
+			
 		elif [ "$Errorlevel" != "0" ];
 		then
 			echo -e "\033[31mErreure\033[00m"
