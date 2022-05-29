@@ -4938,7 +4938,8 @@ echo "	sleep 5" >> MAJ.sh
 echo "fi" >> MAJ.sh
 
 sudo chmod +rwx MAJ.sh
-./MAJ.sh && exit								# crée un MSG d'ereur aprè un maj est un exit mais permet de bien quiter malgrer un exit
+./MAJ.sh
+exit								# crée un MSG d'ereur aprè un maj est un exit mais permet de bien quiter malgrer un exit
 }
 
 INFO()											# En traveau
