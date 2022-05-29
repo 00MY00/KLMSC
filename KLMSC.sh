@@ -4960,7 +4960,7 @@ cat t.txt
 #----------------------------------------------------------
 #				Titre de démarage du script
 clear
-echo -e "\033[35m			Version du script :\033[36m$VERSION\033[00m"						# Info de la version du script
+echo -e "\033[35m		   Version du script :\033[36m$VERSION\033[00m"						# Info de la version du script
 echo -e "\n\n\n"
 echo -e "\033[32m	██╗  ██╗\033[33m██╗     \033[34m███╗   ███╗\033[35m███████╗ \033[36m██████╗"
 echo -e "\033[32m	██║ ██╔╝\033[33m██║     \033[34m████╗ ████║\033[35m██╔════╝\033[36m██╔════╝"
