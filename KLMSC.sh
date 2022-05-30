@@ -2667,7 +2667,7 @@ then
 				break
 			
 			
-			elif [ "${Proprieter:1}" != "" ];
+			elif [ "${Proprieter:0:1}" != "" ];
 			then
 				sudo sed -i "s/$x/max-players=$Proprieter/" "server.properties"
 				Errorlevel=$?
