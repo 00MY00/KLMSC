@@ -4969,6 +4969,7 @@ clear
 cd /home/$USER/KLMSC/
 echo -e "\n\n	Guide d'affichage de la documantation"
 echo -e "\033[35m---------------------------------------------\033[00m"
+echo -e "\033[37m	[ \033[36mexit\033[37m ]	\033[33m\033[04mPour quiter\033[00m"
 echo -e "\033[37m	[ \033[36m1\033[37m ]	\033[33m\033[04mREADME\033[00m"
 echo -e "\033[37m	[ \033[36m2\033[37m ]	\033[33m\033[04mLICENSE\033[00m"
 echo -e "\033[37m	[ \033[36m3\033[37m ]	\033[33m\033[04mConffiguration de X11 pour client MC\033[00m"
