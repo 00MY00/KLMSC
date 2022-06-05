@@ -1,6 +1,6 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=6										# Version du scripte
+VERSION=7										# Version du scripte
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -4942,19 +4942,123 @@ sudo chmod +rwx MAJ.sh
 exit								# crée un MSG d'ereur aprè un maj est un exit mais permet de bien quiter malgrer un exit
 }
 
-INFO()											# En traveau
+INFO()											# Afficher les fichier d'aide
 {
+##########################
+#
+TutoVbX="Tutorielle d'utilisation de KLMc Virtual Box.docx"
+TutoX11="Utiliser Client Minecraft est affichage docx.docx"
 
 # aficher le contenu docx
 
-[ -f "t.txt" ] && sudo rm -f "t.txt"
-sudo apt-get update
-sudo apt install docx2txt
-sudo docx2txt "Tutorielle d'utilisation de KLMc Virtual Box.docx" t.txt
-cat t.txt
+libreoffice --version
+Errorlevel=$?
+	if [ "$Errorlevel" -eq "0" ];
+	then
+		echo -e "Libreoffiche est installer"
+	elif [ "$Errorlevel" != "0" ];
+	then
+		sudo apt install libreoffice
+	fi
 
+while ((i<1));
+do
+cd /home/$USER/KLMSC/
+echo -e "\n\n	Guide d'affichage de la documantation"
+echo -e "\033[35m---------------------------------------------\033[00m"
+echo -e "\033[37m	[ \033[36m1\033[37m ]	\033[33m\033[04mREADME\033[00m"
+echo -e "\033[37m	[ \033[36m2\033[37m ]	\033[33m\033[04mLICENSE\033[00m"
+echo -e "\033[37m	[ \033[36m3\033[37m ]	\033[33m\033[04mConffiguration de X11 pour client MC\033[00m"
+echo -e "	---- Nécecite X11 ----"
+echo -e "\033[37m	[ \033[36m4\033[37m ]	\033[33m\033[04mTutorielle d'utilisation de KLMSC sur VB\033[00m"
+echo -e "\033[37m	[ \033[36m5\033[37m ]	\033[33m\033[04mTutorielle d'utilisation de KLMSC\033[00m"
+echo -e "\033[35m---------------------------------------------\033[00m"
+echo -e "\n\n"
 
+read -p ": " InfoDoc
 
+if [ "$InfoDoc" = "1" ];
+then
+	clear
+	cat README.md
+	
+	read -p "" pause
+
+elif [ "$InfoDoc" = "2" ];
+then
+	clear
+	cat LICENSE
+	
+	read -p "" pause
+	
+elif [ "$InfoDoc" = "3" ];
+then
+	clear
+	cat X11.txt
+	
+	read -p "" pause
+	
+elif [ "$InfoDoc" = "4" ];							# Utilise le X11 sur PUTTY pour afficher avec libreoffice
+then
+	clear
+	libreoffice "$TutoVbX"
+
+elif [ "$InfoDoc" = "5" ];
+then
+	clear
+	libreoffice "$TutoX11"
+	
+elif [ "$InfoDoc" = "exit" ];
+then
+	break
+
+fi
+
+done
+}
+
+InstallMinecraft_client()
+{
+while ((i<1));
+do
+	clear
+	wget https://dl2.tlauncher.org/f.php?f=files%2FTLauncher-2.841.zip
+	Errorlevel=$?
+	if [ "$Errorlevel" -eq "0" ];
+	then
+		echo -e "\033[32m[OK]	Commande réusite\033[00m"
+		sleep 2
+		clear
+		sudo apt install unzip
+		sudo mv "f.php?f=files%2FTLauncher-2.841.zip" "jar"
+		sudo chmod +rwx jar
+		[ ! -d "/home/$USER/Tluncheur" ] && mkdir /home/$USER/Tluncheur/
+		cd /home/$USER/Tluncheur/
+		sudo mv "/home/$USER/jar" "/home/$USER/Tluncheur"
+		sudo unzip jar
+		sudo rm -f jar
+		echo -e "[OK] Terminé"
+		sudo apt-get update
+		sudo apt-get upgrade
+		sudo apt install openjdk-17-jdk
+		sudo apt-get install openjfx
+		sudo chmod +rwx TLauncher-2.841.jar
+		sudo sed -i "s/X11Forwarding no/X11Forwarding yes/" "/etc/ssh/sshd_config"
+		
+		
+	elif [ "$Errorlevel" != "0" ];
+	then
+		echo -e "\033[31mErreure\033[00m"
+		sleep 5
+		break
+	fi
+done
+}
+
+StartMinecraftClient()
+{
+DISPLAY=localhost:0.0
+sudo java -jar TLauncher-2.841.jar
 }
 
 #----------------------------------------------------------
@@ -4987,6 +5091,7 @@ do
 	echo -e "	[\033[32mprop \033[00m] Pour Changer les propriétés"
 	echo -e "	[\033[32mdel  \033[00m] Pour Suprimer un serveur"
 	echo -e "	[\033[32mmaj  \033[00m] Pour Mettre à jour le script"
+	echo -e "	[\033[32minf  \033[00m] Pour Afficher les documents d'aide"
 	echo -e "	[\033[32mstart\033[00m] Pour Afficher est démarrer les serveurs"
 	echo -e "\n"
 	echo -e "\033[35m≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\033[00m\n"
@@ -5040,6 +5145,10 @@ do
 	elif [ "$user" = "maj" ];
 	then
 		MAJ
+		
+	elif [ "$user" = "inf" ];
+	then
+		INFO
 		
 	elif [ "$user" = "" ];
 	then
