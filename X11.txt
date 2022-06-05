@@ -18,7 +18,8 @@ installer Xming sur votre machine Windows
 
 5)	Vous allez trouver le fichier start X11.bat il suffit de l’exécuter
 
-6)	Vérifier que ce service ‘Xming’ soit toujours démarrer ci vous voulez afficher les docx ou lancer le client TLuncher.
+6)	Vérifier que ce service ‘Xming’ soit toujours démarrer ci vous voulez 
+	afficher les docx ou lancer le client TLuncher.
 
 
 --Configuration de PUTTY pour utiliser X11--
