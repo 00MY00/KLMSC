@@ -4955,7 +4955,9 @@ libreoffice --version
 Errorlevel=$?
 	if [ "$Errorlevel" -eq "0" ];
 	then
+		clear
 		echo -e "Libreoffiche est installer"
+		sleep 2
 	elif [ "$Errorlevel" != "0" ];
 	then
 		sudo apt install libreoffice
@@ -4963,6 +4965,7 @@ Errorlevel=$?
 
 while ((i<1));
 do
+clear
 cd /home/$USER/KLMSC/
 echo -e "\n\n	Guide d'affichage de la documantation"
 echo -e "\033[35m---------------------------------------------\033[00m"
