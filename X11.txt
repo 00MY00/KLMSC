@@ -1,8 +1,9 @@
 
 #	Crée par Kuroakashiro
-###############################################################################################
+################################################################################
 Pour pouvoir utiliser l’affichage des DOCX ou DOC ou encor 
-exécuter le client TLuncher il vous faut configurer et installer Xming sur votre machine Windows
+exécuter le client TLuncher il vous faut configurer et 
+installer Xming sur votre machine Windows
 
 --Sur Windows--
 
