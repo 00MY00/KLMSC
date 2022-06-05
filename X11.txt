@@ -1,0 +1,41 @@
+
+#	Crée par Kuroakashiro
+###############################################################################################
+Pour pouvoir utiliser l’affichage des DOCX ou DOC ou encor 
+exécuter le client TLuncher il vous faut configurer et installer Xming sur votre machine Windows
+
+--Sur Windows--
+
+1)	Connecter votre logicielle FTP au serveur Virtual Box sur l’IP 127.0.0.1
+
+2)	Naviguer avec l’explorateur de fichier dans le répertoire /home/KLMSC/
+
+3)	Clique droite sur le fichier start X11.bat ensuit télécharger
+
+4)	Ouvrer un terminale CMD et entrez -> explorer C:\Users\%USERNAME% 
+	Ou ouvrer l’explorateur de fichier est aller dans c:\Users\%USERNAME%
+
+5)	Vous allez trouver le fichier start X11.bat il suffit de l’exécuter
+
+6)	Vérifier que ce service ‘Xming’ soit toujours démarrer ci vous voulez afficher les docx ou lancer le client TLuncher.
+
+
+--Configuration de PUTTY pour utiliser X11--
+
+1)	Ouvrir PUTTY
+ 
+2)	Cliquer sur le petit plus a gauche de SSH est sélectionner X11
+ 
+3)	Cocher la case Enable X11 forwarding
+ 
+4)	Retourner dans l’angle Session et soit recharger une session et 
+	cliquer Save ou crée une nouvelle Session
+ 
+
+
+
+
+
+
+
+
