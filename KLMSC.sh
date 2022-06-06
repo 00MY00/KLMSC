@@ -4968,7 +4968,7 @@ while ((i<1));
 do
 clear
 cd /home/$USER/KLMSC/
-echo -e "\n\n	Guide d'affichage de la documantation"
+echo -e "\n\n	\033[32mGuide d'affichage de la documantation\033[00m"
 echo -e "\033[35m--------------------------------------------------\033[00m"
 echo -e "\033[37m	[ \033[36mexit\033[37m ]	\033[33m\033[04mPour quiter\033[00m"
 echo -e "\033[37m	[ \033[36m1\033[37m ]		\033[33m\033[04mREADME\033[00m"
