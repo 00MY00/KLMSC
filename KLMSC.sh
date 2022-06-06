@@ -4976,7 +4976,7 @@ echo -e "\033[37m	[ \033[36m2\033[37m ]		\033[33m\033[04mLICENSE\033[00m"
 echo -e "\033[37m	[ \033[36m3\033[37m ]		\033[33m\033[04mConffiguration de X11\033[00m"
 echo -e "	\033[35m------ \033[32mNécecite X11 \033[00m\033[35m------"
 echo -e "\033[37m	[ \033[36m4\033[37m ]		\033[33m\033[04mTutorielle d'utilisation de KLMSC sur VB\033[00m"
-echo -e "\033[37m	[ \033[36m5\033[37m ]		\033[33m\033[04mTutorielle d'utilisation de KLMSC\033[00m"
+echo -e "\033[37m	[ \033[36m5\033[37m ]		\033[33m\033[04mTutorielle utilisation de X11 détailer\033[00m"
 echo -e "\033[35m--------------------------------------------------\033[00m"
 echo -e "\n\n"
 
