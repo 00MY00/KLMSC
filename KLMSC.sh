@@ -1,6 +1,7 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
 VERSION=7										# Version du scripte
+NouvelleFonctionaliter="Ajout de la commande [ inf ]"
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -297,7 +298,7 @@ then
 			echo java -Xms1024M -Xmx1024M -jar server.jar nogui >> Start_MC_Serveur.sh
 			sudo chmod +rwx Start_MC_Serveur.sh
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -369,7 +370,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -442,7 +443,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -515,7 +516,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -588,7 +589,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -661,7 +662,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -734,7 +735,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -807,7 +808,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -880,7 +881,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -953,7 +954,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -1026,7 +1027,7 @@ then
 			Rinitialisation_properties
 			# ---------------------------------
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
-			sleep 10
+			sleep 3
 			break
 			
 		elif [ "$eula" = "n" ];
@@ -1074,7 +1075,7 @@ then
 			Rinitialisation_properties
 	# ---------------------------------
 	echo -e "\033[36mEntrée dans le terminale [ \033[32msh -x /home/$USER/$x/Start_MC_Serveur\033[36m ] pour démarer le server\033[00m"
-	sleep 10
+	sleep 3
 
 # 		---------------------------------------
 
@@ -1111,7 +1112,7 @@ then
 			Rinitialisation_properties
 	# ---------------------------------
 	echo -e "\033[36mEntrée dans le terminale [ \033[32msh -x /home/$USER/$x/Start_MC_Serveur\033[36m ] pour démarer le server\033[00m"
-	sleep 10
+	sleep 3
 
 # 		---------------------------------------
 
@@ -1148,7 +1149,7 @@ then
 			Rinitialisation_properties
 	# ---------------------------------
 	echo -e "\033[36mEntrée dans le terminale [ \033[32msh -x /home/$USER/$x/Start_MC_Serveur\033[36m ] pour démarer le server\033[00m"
-	sleep 10
+	sleep 3
 
 # 		---------------------------------------
 
@@ -1186,7 +1187,7 @@ then
 			Rinitialisation_properties
 	# ---------------------------------
 	echo -e "\033[36mEntrée dans le terminale [ \033[32msh -x /home/$USER/$x/Start_MC_Serveur\033[36m ] pour démarer le server\033[00m"
-	sleep 10
+	sleep 3
 
 # 		---------------------------------------
 
@@ -1221,7 +1222,7 @@ then
 			Rinitialisation_properties
 	# ---------------------------------
 	echo -e "\033[36mEntrée dans le terminale [ \033[32msh -x /home/$USER/$x/Start_MC_Serveur\033[36m ] pour démarer le server\033[00m"
-	sleep 10
+	sleep 3
 
 # 		---------------------------------------
 
@@ -1257,7 +1258,7 @@ then
 			Rinitialisation_properties
 	# ---------------------------------
 	echo -e "\033[36mEntrée dans le terminale [ \033[32msh -x /home/$USER/$x/Start_MC_Serveur\033[36m ] pour démarer le server\033[00m"
-	sleep 10
+	sleep 3
 	
 
 # 		---------------------------------------
@@ -4968,15 +4969,15 @@ do
 clear
 cd /home/$USER/KLMSC/
 echo -e "\n\n	Guide d'affichage de la documantation"
-echo -e "\033[35m---------------------------------------------\033[00m"
+echo -e "\033[35m--------------------------------------------------\033[00m"
 echo -e "\033[37m	[ \033[36mexit\033[37m ]	\033[33m\033[04mPour quiter\033[00m"
 echo -e "\033[37m	[ \033[36m1\033[37m ]		\033[33m\033[04mREADME\033[00m"
 echo -e "\033[37m	[ \033[36m2\033[37m ]		\033[33m\033[04mLICENSE\033[00m"
 echo -e "\033[37m	[ \033[36m3\033[37m ]		\033[33m\033[04mConffiguration de X11 pour client MC\033[00m"
-echo -e "	---- Nécecite X11 ----"
+echo -e "	\033[35m------ \033[32mNécecite X11 \033[00m\033[45m------"
 echo -e "\033[37m	[ \033[36m4\033[37m ]		\033[33m\033[04mTutorielle d'utilisation de KLMSC sur VB\033[00m"
 echo -e "\033[37m	[ \033[36m5\033[37m ]		\033[33m\033[04mTutorielle d'utilisation de KLMSC\033[00m"
-echo -e "\033[35m---------------------------------------------\033[00m"
+echo -e "\033[35m--------------------------------------------------\033[00m"
 echo -e "\n\n"
 
 read -p ": " InfoDoc
@@ -5021,7 +5022,7 @@ fi
 done
 }
 
-InstallMinecraft_client()
+InstallMinecraft_client()						# En traveau
 {
 while ((i<1));
 do
@@ -5048,6 +5049,19 @@ do
 		sudo apt-get install openjfx
 		sudo chmod +rwx TLauncher-2.841.jar
 		sudo sed -i "s/X11Forwarding no/X11Forwarding yes/" "/etc/ssh/sshd_config"
+		cat /etc/ssh/sshd_config | grep "ForwardX11Trusted yes"
+		Errorlevel=$?
+		if [ "$Errorlevel" != "0" ];
+		then
+			sudo echo "ForwardX11Trusted yes" >> /etc/ssh/sshd_config
+			sudo service ssh start
+			
+		else
+			sudo sed -i "s/ForwardX11Trusted no/ForwardX11Trusted yes/" "/etc/ssh/sshd_config"
+			
+		fi
+		
+		
 		
 		
 	elif [ "$Errorlevel" != "0" ];
@@ -5059,10 +5073,28 @@ do
 done
 }
 
-StartMinecraftClient()
+StartMinecraftClient()							# En traveau
 {
-DISPLAY=localhost:0.0
+
+echo -e "Entrée votre IP de la carte ethernet vEthernet (WSL)"
+
+read -p ": " MyIP
+
+if [ "$MyIP" = "" ];						# pour que la page graphique puisse s'ouvrire sur l'haute
+then
+	MyIP="172.30.48.1"
+fi	
+
+export DISPLAY="$MyIP:0.0"
+# xauth list|grep `uname -n`
+# DISPLAY=:0; export DISPLAY
+# xauth add $DISPLAY . hexkey
+
+
+
+
 sudo java -jar TLauncher-2.841.jar
+xauth remove $DISPLAY
 }
 
 #----------------------------------------------------------
@@ -5079,6 +5111,7 @@ echo -e "\033[32m	╚═╝  ╚═╝\033[33m╚══════╝\033[34m�
 echo -e "\n		\033[32m\033[04mCrée par Kuroakashiro"
 echo -e "		\033[32m\033[04mTous droit réservé à Kuroakashiro\n"
 echo -e "\033[30m"
+echo -e "\033[35m		Nouveauté : \033[36m'$NouvelleFonctionaliter'\033[00m"
 sleep 5
 echo -e "\033[00m"
 
