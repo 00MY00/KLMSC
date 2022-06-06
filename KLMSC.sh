@@ -5111,7 +5111,7 @@ echo -e "\033[32m	╚═╝  ╚═╝\033[33m╚══════╝\033[34m�
 echo -e "\n		\033[32m\033[04mCrée par Kuroakashiro"
 echo -e "		\033[32m\033[04mTous droit réservé à Kuroakashiro\n"
 echo -e "\033[30m"
-echo -e "\033[35m		Nouveauté : \033[36m'$NouvelleFonctionaliter'\033[00m"
+echo -e "\n\033[35m		Nouveauté : \033[36m'$NouvelleFonctionaliter'\033[00m"
 sleep 5
 echo -e "\033[00m"
 
