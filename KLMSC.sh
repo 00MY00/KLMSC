@@ -5075,11 +5075,23 @@ elif [ "$InfoDoc" = "4" ];							# Utilise le X11 sur PUTTY pour afficher avec l
 then
 	clear
 	libreoffice "$TutoVbX"
+	Errorlevel=$?
+	if [ "$Errorlevel" -eq "130" ];
+	then
+		echo -e "\n\nErreur de connection probablement le service \nXming n'es pas en marche !"
+		
+	fi
 
 elif [ "$InfoDoc" = "5" ];
 then
 	clear
 	libreoffice "$TutoX11"
+	Errorlevel=$?
+	if [ "$Errorlevel" -eq "130" ];
+	then
+		echo -e "\n\nErreur de connection probablement le service \nXming n'es pas en marche !"
+		
+	fi
 	
 elif [ "$InfoDoc" = "exit" ];
 then
