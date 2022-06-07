@@ -5074,6 +5074,7 @@ then
 elif [ "$InfoDoc" = "4" ];							# Utilise le X11 sur PUTTY pour afficher avec libreoffice
 then
 	clear
+	echo -e "\033[35mCTRL + C ci il y a une erreur\033[00m"
 	libreoffice "$TutoVbX"
 	Errorlevel=$?
 	if [ "$Errorlevel" -eq "130" ];
@@ -5085,7 +5086,8 @@ then
 elif [ "$InfoDoc" = "5" ];
 then
 	clear
-	libreoffice "$TutoX11"
+	echo -e "\033[35mCTRL + C ci il y a une erreur\033[00m"
+	libreoffice "$TutoX11" --view 
 	Errorlevel=$?
 	if [ "$Errorlevel" -eq "130" ];
 	then
