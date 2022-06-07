@@ -1,7 +1,7 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
 VERSION=7										# Version du scripte
-NouvelleFonctionaliter="Ajout de la commande [ inf ]"
+NouvelleFonctionaliter="Ajout de la version Minecraft 1.19"
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -113,8 +113,6 @@ echo "max-world-size=29999984" >> "server.properties"
 # ---------------------------------
 }
 
-
-
 startt()										# Main fonction programe
 {
 clear
@@ -221,6 +219,7 @@ do
 	ls /home/$USER | grep "Minecraft-"
 	echo -e "\033[35m--------------------------\033[00m\n"
 	
+echo -e "\033[33m\033[10mServeur verssion : \033[35m\033[04m1.19\033[00m\n	\033[32m0\n\033[36m--------------------\033[00m"
 echo -e "\033[33m\033[10mServeur verssion : \033[35m\033[04m1.18\033[00m\n	\033[32m1\n\033[36m--------------------\033[00m"
 echo -e "\033[33m\033[10mServeur verssion : \033[35m\033[04m1.17\033[00m\n	\033[32m2\n\033[36m--------------------\033[00m"
 echo -e "\033[33m\033[10mServeur verssion : \033[35m\033[04m1.16\033[00m\n	\033[32m3\n\033[36m--------------------\033[00m"
@@ -243,8 +242,77 @@ echo -e "\033[33m\033[10mServeur verssion : \033[35m\033[04m1.2\033[00m\n	\033[3
 
 read -p ": " VersionServer
 
+if [ "$VersionServer" -eq "0" ];
+then
+	
+	[ -d "/home/$USER/Minecraft-1.19" ] && sudo rm -rf "/home/$USER/Minecraft-1.19"
+	mkdir /home/$USER/Minecraft-1.19
+	cd /home/$USER/Minecraft-1.19
+	clear
+	echo -e "server 1.19"
+	wget https://launcher.mojang.com/v1/objects/e00c4052dac1d59a1188b2aa9d5a87113aaf1122/server.jar
+	Errorlevel=$?							# Errorlevel dans une variale
+	if [ "$Errorlevel" = "0" ];				# Errorlevel
+	then
+		echo -e "\033[32m[OK] Operation réusi instalation fini\033[00m"
+	elif [ "$Errorlevel" = "6" ];
+	then
+		echo -e "\033[31mL'accès a été refusé ! \033[00m"
+	elif [ "$Errorlevel" != "0" ];
+	then
+		echo -e "\033[31mUne erreur est survenu !\033[00m"
+	fi
+	
+	echo -e "lancement du server"
+	java -Xms1024M -Xmx1024M -jar server.jar nogui 	# Démarage de première fois
+	Errorlevel=$?							# Errorlevel dans une variale
+	if [ "$Errorlevel" = "0" ];				# Errorlevel
+	then
+		echo -e "\033[32m[OK] Operation réusi le serveur est crée\033[00m"
+		
+	elif [ "$Errorlevel" = "6" ];
+	then
+		echo -e "\033[31mL'accès a été refusé ! \033[00m"
+	elif [ "$Errorlevel" != "0" ];
+	then
+		echo -e "\033[31mUne erreur est survenu !\033[00m"
+	fi
+	
+	x="Minecraft-1.19"
 
-if [ "$VersionServer" -eq "1" ];
+	while ((j<1));
+	do
+		clear
+		echo -e "\n\nAccepter la EULA !\n[\033[32my\033[00m]	Pour oui\n[\033[31mn\033[00m]	Pour tous annuler !\n\n"
+		
+		read -p ": " eula					# accepter la eula
+		
+		if [ "$eula" = "y" ];
+		then
+			echo -e "Vous avez accépter la eula !"
+			sed -i "s/eula=false/eula=true/" "eula.txt"
+			echo #!/bin/bash > Start_MC_Serveur.sh
+			echo echo -e "\033[33mDémarage du serveur $x \033[32m" >> Start_MC_Serveur.sh
+			echo java -Xms1024M -Xmx1024M -jar server.jar nogui >> Start_MC_Serveur.sh
+			sudo chmod +rwx Start_MC_Serveur.sh
+			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
+			sleep 3
+			break
+			
+		elif [ "$eula" = "n" ];
+		then
+			echo -e "C'est reffuser supresion complaite"
+			cd /home/$USER/$x
+			sudo rm -rf "/home/$USER/$x"
+			break
+			
+		fi
+	done
+
+# 		---------------------------------------
+
+
+elif [ "$VersionServer" -eq "1" ];
 then
 	
 	[ -d "/home/$USER/Minecraft-1.18.2" ] && sudo rm -rf "/home/$USER/Minecraft-1.18.2"
