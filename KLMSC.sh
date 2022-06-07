@@ -1,6 +1,6 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=7										# Version du scripte
+VERSION=8										# Version du scripte
 NouvelleFonctionaliter="Ajout de la version Minecraft 1.19"
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
