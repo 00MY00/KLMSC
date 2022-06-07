@@ -12,9 +12,9 @@ Blanc=$(echo -e "\033[37m") 					# colors
 Vide=$(echo -e "\033[00m")						# Colors
 Vert=$(echo -e "\033[32m")						# Colors
 title="Kuroakashiro's Linux Minecraft server creator"
-												# Titre de du terminale
+												# Titre du terminale
 echo -e "\033]2;$title\007" 					# Permet de déffinire le titre de la page
-[ -f "/home/$USER/MAJ.sh" ] && sudo rm -f /home/$USER/MAJ.sh
+[ -f "/home/$USER/MAJ.sh" ] && sudo rm -f /home/$USER/MAJ.sh && cd .. && cd /home/$USER/KLMSC/
 #-------------------------------------------------------
 
 RoseDeFeu()										# Easter egg
