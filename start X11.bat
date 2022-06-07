@@ -12,7 +12,7 @@ if not exist "C:\Program Files (x86)\Xming" start https://downloads.sourceforge.
 cd "C:\Program Files (x86)\Xming"
 cls
 echo start
-start unins000.exe
+start Xming.exe
 exit
 
 
