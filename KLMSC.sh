@@ -1,7 +1,7 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=8										# Version du scripte
-NouvelleFonctionaliter="Ajout de la version Minecraft 1.19"
+VERSION=9										# Version du scripte
+NouvelleFonctionaliter="Ajout de la version Minecraft 1.19\nDétection de mise à jour"
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -16,6 +16,8 @@ title="Kuroakashiro's Linux Minecraft server creator"
 echo -e "\033]2;$title\007" 					# Permet de déffinire le titre de la page
 [ -f "/home/$USER/MAJ.sh" ] && sudo rm -f /home/$USER/MAJ.sh
 #-------------------------------------------------------
+
+
 
 RoseDeFeu()										# Easter egg
 {
@@ -5179,8 +5181,48 @@ sudo java -jar TLauncher-2.841.jar
 xauth remove $DISPLAY
 }
 
+FindNewVersion()								# Recherche de nouvelle version
+{
+if [ -f "Version" ];							# Recuperation version actuelle
+then
+	version1=$(awk "/Version/" "Version")
+	version1=${version:10}
+	
+	x=$(ping www.google.com -c 1)			# Verifie ci Internet est joiniable
+	Errorlevel=$?
+	
+	if [ "$Errorlevel" -eq "0" ];
+	then
+		sudo git clone https://github.com/00MY00/KLMSC/blob/e681b36ddbcc02656814ace8369606525cac9cdc/Version
+		
+		version2=$(awk "/Version/" "Version")	# Nouvelle version
+		version2=${version:10}
+		
+		if [ "$version1" -lt "$version2" ];		# compareson version1 < version2
+		then
+			NewVersion="\033[32mNouvelle version disponible :$version2\033[31m"			# pour oui
+		else
+			NewVersion="\033[33mPas de nouvelle version\033[00m"						# 0 pour non
+		fi
+
+	elif [ "$Errorlevel" -eq "1" ];
+	then
+		NewVersion="\033[31mPas d'internet verifier conection !\033[00m"
+		
+	else
+		NewVersion="\033[31mErreur de Ping sur www.google.com\033[31m"
+	
+	fi
+
+fi	
+
+}
+
+FindNewVersion									# Cherche nouvelle version
+
 #----------------------------------------------------------
 #				Titre de démarage du script
+
 clear
 echo -e "\n"
 echo -e "\033[35m		   Version du script :\033[36m$VERSION\033[00m"						# Info de la version du script
@@ -5203,6 +5245,7 @@ echo -e "\033[00m"
 while ((i<1));									# Main
 do
 	clear
+	echo -e "$NewVersion"
 	echo -e "\n"
 	echo -e "\033[35m			Version du script :\033[36m$VERSION\033[00m"						# Info de la version du script
 	echo -e "\033[35m≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\033[00m"
