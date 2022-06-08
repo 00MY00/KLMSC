@@ -5206,7 +5206,7 @@ then
 		
 		if [ "$version1" != "$version2" ];		# compareson version1 < version2
 		then
-			NewVersion="\033[32mNouvelle version disponible :$version2\033[31m"
+			NewVersion="\033[32mNouvelle version disponible :\033[36m$version2\033[31m"
 			sed -i "s/$version2/$version1/" "Version"
 			continue
 		elif [ "$version1" -eq "$version2" ];	# compareson version1 < version2
