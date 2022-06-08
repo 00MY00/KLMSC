@@ -5188,12 +5188,15 @@ then
 	version1=$(awk "/Version/" "Version")
 	version1=${version:10}
 	
-	x=$(ping www.google.com -c 1)			# Verifie ci Internet est joiniable
+	x=$(ping www.google.com -c 1)				# Verifie ci Internet est joiniable
 	Errorlevel=$?
 	
 	if [ "$Errorlevel" -eq "0" ];
 	then
-		curl -o Version https://github.com/00MY00/KLMSC/blob/3281be59ecadf524d89559aa0bdef4c84618de63/Version
+		
+		rm -f Version
+		
+		wget https://raw.githubusercontent.com/00MY00/KLMSC/main/Version
 		
 		version2=$(awk "/Version/" "Version")	# Nouvelle version
 		version2=${version:10}
