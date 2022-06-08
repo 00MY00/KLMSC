@@ -1,7 +1,7 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
 VERSION=9										# Version du scripte
-NouvelleFonctionaliter="Ajout de la version Minecraft 1.19\n				Détection de mise à jour"
+NouvelleFonctionaliter="Ajout de la version Minecraft 1.19\n			   Détection de mise à jour"
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
