@@ -5204,12 +5204,12 @@ then
 		version2=$(echo "${version2:10}")
 		
 		
-		if [ "$version1" != "$version2" ];		# compareson version1 < version2
+		if [ "$version1" != "$version2" ];		# compareson version1 diferant version2
 		then
 			NewVersion="\033[32mNouvelle version disponible :\033[36m$version2\033[31m"
 			sed -i "s/$version2/$version1/" "Version"
 			continue
-		elif [ "$version1" = "$version2" ];	# compareson version1 < version2
+		elif [ "$version1" = "$version2" ];		# Identique
 		then
 			NewVersion="\033[33mPas de nouvelle version\033[00m"					
 		fi
