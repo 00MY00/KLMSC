@@ -1,7 +1,7 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
 VERSION=9										# Version du scripte
-NouvelleFonctionaliter="Ajout de la version Minecraft 1.19\nDétection de mise à jour"
+NouvelleFonctionaliter="Ajout de la version Minecraft 1.19\n				Détection de mise à jour"
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -5186,7 +5186,9 @@ FindNewVersion()								# Recherche de nouvelle version
 if [ -f "Version" ];							# Recuperation version actuelle
 then
 	version1=$(awk "/Version/" "Version")
-	version1=${version:10}
+	version1=$(echo "${version1:10}")
+	
+	
 	
 	x=$(ping www.google.com -c 1)				# Verifie ci Internet est joiniable
 	Errorlevel=$?
@@ -5199,23 +5201,31 @@ then
 		wget https://raw.githubusercontent.com/00MY00/KLMSC/main/Version
 		
 		version2=$(awk "/Version/" "Version")	# Nouvelle version
-		version2=${version:10}
+		version2=$(echo "${version2:10}")
 		
-		if [ "$version1" -lt "$version2" ];		# compareson version1 < version2
+		
+		if [ "$version1" != "$version2" ];		# compareson version1 < version2
 		then
-			NewVersion="\033[32mNouvelle version disponible :$version2\033[31m"			# pour oui
-		else
-			NewVersion="\033[33mPas de nouvelle version\033[00m"						# 0 pour non
+			NewVersion="\033[32mNouvelle version disponible :$version2\033[31m"
+			sed -i "s/$version2/$version1/" "Version"
+			continue
+		elif [ "$version1" -eq "$version2" ];	# compareson version1 < version2
+		then
+			NewVersion="\033[33mPas de nouvelle version\033[00m"					
 		fi
 
-	elif [ "$Errorlevel" -eq "1" ];
+	elif [ "$Errorlevel" = "1" ];
 	then
 		NewVersion="\033[31mPas d'internet verifier conection !\033[00m"
+		continue
 		
 	else
 		NewVersion="\033[31mErreur de Ping sur www.google.com\033[31m"
 	
 	fi
+	
+else
+	wget https://raw.githubusercontent.com/00MY00/KLMSC/main/Version
 
 fi	
 
