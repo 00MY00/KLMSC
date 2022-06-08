@@ -5193,7 +5193,7 @@ then
 	
 	if [ "$Errorlevel" -eq "0" ];
 	then
-		sudo git clone https://github.com/00MY00/KLMSC/blob/e681b36ddbcc02656814ace8369606525cac9cdc/Version
+		curl -o Version https://github.com/00MY00/KLMSC/blob/3281be59ecadf524d89559aa0bdef4c84618de63/Version
 		
 		version2=$(awk "/Version/" "Version")	# Nouvelle version
 		version2=${version:10}
