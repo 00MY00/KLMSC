@@ -4988,29 +4988,62 @@ done
 
 MAJ()											# Mise a joure automatique du scripte
 {
-echo -e "	\n\n\033[33m\033[04mMise à jour en cours\033[00m\033[32m ..."
-cd /home/$USER/
-sudo rm -f MAJ.sh
-echo "#!/bin/bash" >> MAJ.sh
-echo "sudo rm -rf /home/$USER/KLMSC" >> MAJ.sh
-echo "git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$USER/KLMSC/KLMSC.sh && cd /home/$USER/KLMSC/" >> MAJ.sh
-echo "Errorlevel=\$?" >> MAJ.sh
-echo "if [ "\$Errorlevel" -eq "0" ];" >> MAJ.sh
-echo "then" >> MAJ.sh
-echo "	echo -e "\033[32m[OK]	Commande réusite\033[00m"" >> MAJ.sh
-echo "	sudo chmod +rwx /home/$USER/KLMSC/" >> MAJ.sh
-echo "	./KLMSC.sh" >> MAJ.sh
-echo "	sleep 2" >> MAJ.sh
-echo "	break" >> MAJ.sh
-echo "elif [ "\$Errorlevel" != "0" ];" >> MAJ.sh
-echo "then" >> MAJ.sh
-echo "	echo -e "\033[31mErreure\033[00m"" >> MAJ.sh
-echo "	sleep 5" >> MAJ.sh
-echo "fi" >> MAJ.sh
 
-sudo chmod +rwx MAJ.sh
-./MAJ.sh
-exit								# crée un MSG d'ereur aprè un maj est un exit mais permet de bien quiter malgrer un exit
+x=$(ping www.google.com -c 1)				# Verifie ci Internet est joiniable
+Errorlevel=$?
+
+if [ "$Errorlevel" -eq "0" ];
+then
+	echo -e "	\n\n\033[33m\033[04mMise à jour en cours\033[00m\033[32m ..."
+	cd /home/$USER/
+	sudo rm -f MAJ.sh
+	echo "#!/bin/bash" >> MAJ.sh
+	echo "sudo rm -rf /home/$USER/KLMSC" >> MAJ.sh
+	echo "git clone https://github.com/00MY00/KLMSC.git && sudo chmod +rwx /home/$USER/KLMSC/KLMSC.sh && cd /home/$USER/KLMSC/" >> MAJ.sh
+	echo "Errorlevel=\$?" >> MAJ.sh
+	echo "if [ "\$Errorlevel" -eq "0" ];" >> MAJ.sh
+	echo "then" >> MAJ.sh
+	echo "	echo -e "\033[32m[OK]	Commande réusite\033[00m"" >> MAJ.sh
+	echo "	sudo chmod +rwx /home/$USER/KLMSC/" >> MAJ.sh
+	echo "	./KLMSC.sh" >> MAJ.sh
+	echo "	sleep 2" >> MAJ.sh
+	echo "	break" >> MAJ.sh
+	echo "elif [ "\$Errorlevel" != "0" ];" >> MAJ.sh
+	echo "then" >> MAJ.sh
+	echo "	echo -e "\033[31mErreure\033[00m"" >> MAJ.sh
+	echo "	sleep 5" >> MAJ.sh
+	echo "fi" >> MAJ.sh
+
+	sudo chmod +rwx MAJ.sh
+	x=$(ping www.google.com -c 1)				# Verifie ci Internet est joiniable
+	Errorlevel=$?
+	
+	if [ "$Errorlevel" -eq "0" ];
+	then
+		./MAJ.sh
+		exit								# crée un MSG d'ereur aprè un maj est un exit mais permet de bien quiter malgrer un exit
+	
+	else
+		echo -e "\033[31m\n\nPAS d'internet verifier la conection\033[00m\n\n"
+		sleep 3
+		sudo rm -f /home/$USER/MAJ.sh
+	fi
+
+
+elif [ "$Errorlevel" -eq "1" ];
+then
+	clear 
+	echo -e "\033[31m\n\nPAS d'internet verifier la conection\033[00m\n\n"
+	sleep 3
+	continue
+	
+else
+	clear
+	echo -e "\033[31m\n\nERREUR $Errorlevel\033[00m\n\n"
+	sleep 3
+	
+fi
+
 }
 
 INFO()											# Afficher les fichier d'aide
@@ -5183,11 +5216,12 @@ xauth remove $DISPLAY
 
 FindNewVersion()								# Recherche de nouvelle version
 {
+echo -e "\033[30m"
 if [ -f "Version" ];							# Recuperation version actuelle
 then
+
 	version1=$(awk "/Version/" "Version")
 	version1=$(echo "${version1:10}")
-	
 	
 	
 	x=$(ping www.google.com -c 1)				# Verifie ci Internet est joiniable
@@ -5208,16 +5242,15 @@ then
 		then
 			NewVersion="\033[32mNouvelle version disponible :\033[36m$version2\033[31m"
 			sed -i "s/$version2/$version1/" "Version"
-			continue
+			
 		elif [ "$version1" = "$version2" ];		# Identique
 		then
-			NewVersion="\033[33mPas de nouvelle version\033[00m"					
+			NewVersion="\033[33mPas de nouvelle version\033[00m"
 		fi
 
 	elif [ "$Errorlevel" = "1" ];
 	then
 		NewVersion="\033[31mPas d'internet verifier conection !\033[00m"
-		continue
 		
 	else
 		NewVersion="\033[31mErreur de Ping sur www.google.com\033[31m"
@@ -5228,10 +5261,9 @@ else
 	wget https://raw.githubusercontent.com/00MY00/KLMSC/main/Version
 
 fi	
-
+echo -e "\033[00m"
 }
 
-FindNewVersion									# Cherche nouvelle version
 
 #----------------------------------------------------------
 #				Titre de démarage du script
@@ -5255,8 +5287,9 @@ echo -e "\033[00m"
 
 #----------------------------------------------------------
 
-while ((i<1));									# Main
+while ((i<1));										# Main
 do
+	FindNewVersion									# Cherche nouvelle version
 	clear
 	echo -e "$NewVersion"
 	echo -e "\n"
