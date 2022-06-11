@@ -1,7 +1,7 @@
 #!/bin/bash
 #	Crée par Kuroakashiro 
-VERSION=9										# Version du scripte pas oublier de changer fichier Version
-NouvelleFonctionaliter="Détection de mise à jour"
+VERSION=10										# Version du scripte pas oublier de changer fichier Version
+NouvelleFonctionaliter="Corection Minecraft-1.19 properties"
 Green=$(echo -e "\033[32m")						# Colors
 Maganta=$(echo -e "\033[35m")					# Colors
 Orange=$(echo -e "\033[33m")					# Colors
@@ -297,6 +297,7 @@ then
 			echo echo -e "\033[33mDémarage du serveur $x \033[32m" >> Start_MC_Serveur.sh
 			echo java -Xms1024M -Xmx1024M -jar server.jar nogui >> Start_MC_Serveur.sh
 			sudo chmod +rwx Start_MC_Serveur.sh
+			Rinitialisation_properties
 			echo -e "Entrée dans le terminale [ sh -x Start_MC_Serveur ] pour démarer le server"
 			sleep 3
 			break
