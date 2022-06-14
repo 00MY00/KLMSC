@@ -1,0 +1,10 @@
+sles151:/etc/systemd/system/
+[Unit]
+Description=Lancement du serveur MY_server
+
+[Service]
+Type=simple
+ExecStart=/home/MY_user/MY_server/Start_MC_Serveur.sh
+
+[Install]
+WantedBy=multi-user.target
