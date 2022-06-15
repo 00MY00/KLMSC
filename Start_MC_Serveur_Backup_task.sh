@@ -4,7 +4,7 @@
 dat=$(date)
 
 sudo mkdir /home/Backup/"$dat"
-sudo cp /home/My_user/MY_server /home/Backup/"$dat"
+sudo cp /home/MY_user/MY_server /home/Backup/"$dat"
 
 # le démarage du serveur
 
